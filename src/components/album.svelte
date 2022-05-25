@@ -1,6 +1,6 @@
 <script lang="ts">
-    const title = '';
-    const cover = '';
+    export let title = '';
+    export let cover = '';
 </script>
 
 <div class="album">

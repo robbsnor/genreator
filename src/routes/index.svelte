@@ -4,7 +4,8 @@
 
 <h1>Index</h1>
 
-<Album></Album>
+<Album title="yo"></Album>
+<Album title="yos"></Album>
 
 <style lang="scss">
     h1{
