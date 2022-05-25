@@ -5,10 +5,9 @@
     import Album from '../components/album.svelte';
 
     var client_id = '4acb2c2beed54527aa5851b75467fe86';
+    // var redirect_uri = 'http://localhost:3000/';
     var redirect_uri = 'http://localhost:3000/';
-
     var scope = 'user-read-private user-read-email';
-
     var url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=token';
     url += '&client_id=' + encodeURIComponent(client_id);
@@ -21,7 +20,9 @@
     }
 
     onMount(() => {
+        // const redirectUrl = window.location.origin;
         const accessToken = getHashValue('access_token');
+        redirect_uri = window.location.origin;
 
         fetch('https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V', {
             headers: {
@@ -33,8 +34,6 @@
             console.log(res);
         })
     });
-
-
 
 </script>
 
