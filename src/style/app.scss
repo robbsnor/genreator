@@ -1,1 +1,11 @@
-$h1: green;
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202020;
+    color: #e1e1e1;
+    font-family: 'Poppins', sans-serif;
+}
